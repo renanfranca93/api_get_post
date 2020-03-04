@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Get/Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col">
+            <h2>Teste da API Get/Post</h2>
+            <p>Essa API funciona como uma consulta de estoque e aceita tanto o método GET como POST</p><br>
+
+            <strong>Teste rápido</strong>
+            <a href="http://localhost/api_get_post/api/v1?modulo=estoque&acao=mostrar">Mostrar todos os produtos</a>
+            <br>
+            <hr>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+            <strong>Teste através do formuário com POST</strong><br>
+
+                <form action="http://localhost/api_get_post/api/v1/index.php" method="post">
+
+                Módulo:<br><input type="text" name="modulo" value="estoque"> <br>
+                Ação:<br><input type="text" name="acao" value="mostrar"><br><br>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                
+                </form>
+        </div>
+        
+        <div id="div2" class="col-md-6">
+            <strong>Teste através do formuário com GET</strong><br>
+
+            <form action="http://localhost/api_get_post/api/v1" method="get">
+
+            Módulo:<br><input type="text" name="modulo" value="estoque"> <br>
+            Ação:<br><input type="text" name="acao" value="mostrar"><br><br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            
+            </form>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col">
+        <hr>
+
+        <strong>Teste através do link e parâmetros abaixo</strong>
+        
+        <p>Para customizar use as opções abaixo:</p>
+        <p>http://localhost/api_get_post/api/v1?modulo=[modulo]&acao=[acao]</p>
+        <p>As opções de módulos são:</p>
+        <ul>
+            <li>estoque</li>
+        </ul>
+        <p>As opções de ações são:</p>
+        <ul>
+            <li>mostrar</li>
+        </ul>
+        <p>Como opcional pode-se usar os parâmetros de busca para a ação Mostrar:</p>
+        <ul>
+            <li>categoria</li>
+            <li>precomin</li>
+            <li>precomax</li>
+        </ul>
+    </div>
+    </div>    
+</div>
+</div>  
+
+</body>
+</html>
